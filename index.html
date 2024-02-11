@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roses</title>
+    <style>
+      body {
+        background: transparent;
+      }
+      .container {
+        margin: 0 auto;
+        width: 40%;
+        border: 1px solid cadetblue;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(0, 0, 0) 0%,
+          rgb(64, 64, 64) 90.2%
+        );
+        padding: 8px;
+        border-radius: 10px;
+        color: #ffff;
+        text-align: center;
+      }
+      .container a {
+        color: #ffff;
+        text-decoration: none;
+      }
+      .container a:hover {
+        text-decoration: underline;
+      }
+      .click {
+        display: block;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: normal;
+        border: 1px solid pink;
+        border-radius: 20px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        padding: 5px;
+        margin-top: 15px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 19px;
+        font-weight: normal;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 7px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        border: 1px solid #0000;
+        border-radius: 20px;
+        background: transparent;
+        color: #ffffff;
+        background-color: rgb(49, 49, 206);
+        margin-top: 22px;
+      }
+      button:hover {
+        color: blue;
+        background: #ffffff;
+        transition: all 200ms ease-in-out;
+      }
+      p {
+        text-align: center;
+        font-family: monospace;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Red Roses 🌹 <br />
+        The most beautiful flowers
+      </h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/452/original/Red-Roses-via-merchant.jpg?1700445275"
+        alt="red-roses"
+        width="200"
+      />
+      <hr />
+
+      <h2>
+        Yes i know i chose red roses, But did you know that every rose has a
+        distinct meaning? Yep, that true. We all know that roses are red and
+        violets are blue—but actually, roses can also be blue, and pink, orange,
+        even black. And that’s just the beginning. These beautiful flowers come
+        in many different colors, both naturally and with the help of dye.
+      </h2>
+      <br />
+      <strong>
+        <a
+          href="https://www.rd.com/list/6-rose-colors-and-their-meanings/"
+          target=" _blank"
+        >
+          Read More Here
+        </a>
+      </strong>
+
+      <button>Get Yours</button>
+      <p>Coded by Zandile Ngema</p>
+    </div>
+    <script>
+      function getYours() {
+        let name = prompt("What is your name?");
+        let rose = prompt(
+          "Hello " +
+            name +
+            ", i am giving away  burgudy roses and white roses , please pick one you love😊"
+        );
+        rose = rose.toLowerCase().trim();
+
+        if (rose === "burgudy") {
+          alert("That really nice " + name + "😊");
+        }
+        if (rose === "white") {
+          alert("Fantastic " + name + "😊");
+        }
+        if (rose === "burgudy") {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Here are your burgudy roses " + name + "😊";
+
+          let img = document.querySelector("img");
+          img.src =
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/453/original/2_Burgundy-rose-bouquet-via-globalrose-ecomm.jpg?1700445297";
+        }
+        if (rose === "white") {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Here are your white roses " + name + "😊";
+
+          let img = document.querySelector("img");
+          img.src =
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/454/original/5_White-rose-bouquet-via-via-ftd-ecomm.jpg?1700445308";
+        }
+      }
+      let getButton = document.querySelector("button");
+      getButton.addEventListener("click", getYours);
+    </script>
+  </body>
+</html>
